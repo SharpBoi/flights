@@ -16,16 +16,20 @@ class FlightTable extends Component
     render() {
         // while(rows.length < this.props.rows.length)
         this.rows = [];
-        for(let i = this.rows.length; i < this.props.rows.length; i++)
-        {
-            if(this.props.cityFilter !== "")
-            {
+
+        if(this.props.cityFilter !== ""){
+            for(let i = this.rows.length; i < this.props.rows.length; i++)
                 if(this.props.rows[i].city === this.props.cityFilter)
                     this.rows.push(<FlightTableRow key={i} rowId={i}/>);
-            }
-            // else
-            //     this.rows.push(<FlightTable key={i} rowId={i}/>);
         }
+        else{
+            for(let i = this.rows.length; i < this.props.rows.length; i++)
+                    this.rows.push(<FlightTableRow key={i} rowId={i}/>);
+        }
+        // for(let i = this.rows.length; i < this.props.rows.length; i++) {
+        //     if(this.props.cityFilter === "")
+        //         this.rows.push(<FlightTable key={i} rowId={i}/>);
+        // }
 
         return(
             <div className="flight-table">
