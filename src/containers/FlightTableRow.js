@@ -65,20 +65,19 @@ class FlightTableRow extends Component
     }
     
     deleteSelf(){
-        // mainStore.dispatch({ type: Consts.Table.DELETE_ROW, payload: { rowId: this.id } });
         TableRowActions.DeleteRow(this.id);
     }
 
     turnEditMode(){
 
-        // mainStore.dispatch({ type: Consts.Row.SWITCH_EDIT_MODE, payload: { rowId: this.id } });
         TableRowActions.SwitchEditMode(this.id);
     }
     saveChanges(){
         
         var tds = document.getElementById("tr-" + this.id).children;
         var values = [];
-        for(let i = 0; i < tds.length; i++) values.push(tds[i].children[0].value);
+        for(let i = 0; i < tds.length; i++) 
+            values.push(tds[i].children[0].value);
         
         this.props.rowData["id"] = values[0];
         this.props.rowData["city"] = values[1];
@@ -87,9 +86,7 @@ class FlightTableRow extends Component
         this.props.rowData["actualTime"] = values[4];
         this.props.rowData["status"] = values[5];
 
-        // mainStore.dispatch({ type: Consts.Row.SWITCH_EDIT_MODE, payload: { rowId: this.id } });
         TableRowActions.SwitchEditMode(this.id);
-        // mainStore.dispatch({ type: Consts.Row.SAVE_CHANGES, payload: { rowId: this.id, rowData: this.props.rowData} })
         TableRowActions.SaveChanges(this.id, this.props.rowData);
     }
 }

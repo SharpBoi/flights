@@ -67,4 +67,5 @@ body{
     color: white;
     font-family: consolas;
     font-size: 20px;
+    user-select: none;
 }
