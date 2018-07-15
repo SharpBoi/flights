@@ -1,0 +1,25 @@
+API:
+	Entities:
+		1. Flight
+			1. number (id)
+			2. city (departure/arrival)
+			3. plane type
+			4. time
+			5. actual time
+			6. status (flew out, landed, landing, delayed, ...)
+
+	Actions: 
+		1. Add flight
+		2. Edit flight
+		3. Delete flight
+		4. Get flgiht ?
+		
+		5. switch mode:
+			admin (can edit table and rows)
+			user (can only read table)
+
+WebInterface:
+	1. table of flights
+	2. admin mode (for editing table)
+	3. flights counter
+	4. filter by city

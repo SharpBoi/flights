@@ -1,0 +1,92 @@
+.flight-table-container{
+    text-align: center;
+}
+
+/*TABLE*/
+.flight-table{
+    width: fit-content;
+    margin: auto;
+}
+
+.flight-table table
+{
+    user-select: none;
+
+    border-collapse: collapse;    
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.flight-table table td
+{
+    color: #e3e3e3;
+    font-family: arial;
+    text-align: left;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.flight-table table td button{
+    border: none;
+    background-color: #69c674;
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+.flight-table table td input{
+    border: none;
+    color: #e3e3e3;
+    font-family: arial;
+    text-align: left;
+    font-size: 15px;
+}
+
+.flight-table table .row-controls-container{
+    position: absolute;
+    padding: 0px;
+    display: flex;
+}
+.flight-table table .row-controls-container button{
+    vertical-align: sub;
+    vertical-align: -webkit-baseline-sub;
+}
+
+.flight-table table tr:nth-child(even),
+.flight-table table tr:nth-child(even) td input{
+    background-color: #454545;
+}
+.flight-table table tr:nth-child(odd),
+.flight-table table tr:nth-child(odd) td input{
+    background-color: #292929;
+}
+
+/*TABLE HEADER*/
+.flight-table .head td
+{
+    background-color: rgb(26, 26, 26);
+    color: #69c674;
+    font-family: arial;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+
+    border: none;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 30px;
+}
+.flight-table .head td span{
+    color: gray;
+    text-transform: none;
+}
+.flight-table .head td:nth-child(2){
+    cursor: pointer;
+}
+.flight-table .head td:nth-child(2):hover{
+    border-bottom:  1px solid #69c674;
+    
+}
