@@ -33,6 +33,9 @@ class App extends Component
                     {this.props.tableEditable && <button onClick={this.addRow}>Add row</button>}
                 </div>
 
+                <div className="flight-count-container">
+                    <span>Количество полетов: {this.props.rowsCount}</span>
+                </div>
                 <div className="flight-table-container">
                     <FlightTable />
                 </div>
@@ -57,7 +60,8 @@ class App extends Component
 
 function mapStateToProps(state){
     return{
-        tableEditable : state.flightTableReducer.editable
+        tableEditable : state.flightTableReducer.editable,
+        rowsCount: state.flightTableReducer.rows.length
     }
 }
 
